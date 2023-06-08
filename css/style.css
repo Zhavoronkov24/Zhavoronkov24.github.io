@@ -1,0 +1,182 @@
+/* body {
+    background: -webkit-linear-gradient(90deg, #ffffff,#c4c4c4);                       
+    background: linear-gradient(90deg, #ffffff,#c4c4c4);                                                                                                                    
+} */
+
+body {
+    background: -webkit-linear-gradient(90deg, #ffffff,#c4c4c4);                       
+    background: linear-gradient(90deg, #ffffff,#c4c4c4);
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+div.mid {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+    padding-top: 2%;
+}
+
+div.header {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px; 
+    padding-left: 5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    /*background: #c4c4c4;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                                                       
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+
+p.data {
+    background-color:#cecece;
+    padding-left: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+img.image {
+    border-radius: 15%;
+    opacity: 0.9;
+    display: block;
+    width: 20%;
+    height: auto;
+}
+
+.floating-button {
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+  }
+  .floating-button:hover {
+    background: #666;
+    box-shadow: 0 15px 20px #666;
+    color: white;
+    transform: translateY(-7px);
+}
+
+hr {
+    width: 150px;
+    margin-left: 0%;
+}
+
+code {
+
+}
+
+/*
+Иконки
+*/
+
+a.github:before {
+    font-family: "FontAwesome";
+    content: "\f09b";
+}
+
+a.cv:before {
+    font-family: "FontAwesome";
+    content: "\f0f6";
+}
+
+a.javarush:before {
+    font-family: "FontAwesome";
+    content: "\f2c5";
+}
+
+h1.main_name:before {
+    font-family: "FontAwesome";
+    content: "\f120";
+}
+
+link.favicon:before {
+    font-family: "FontAwesome";
+    content: "\f120";
+}
+
+a.telegram_main:before {
+    font-family: "FontAwesome";
+    content: "\f2c6";
+}
+
+a.telegram_channel:before {
+    font-family: "FontAwesome";
+    content: "\f2c6";
+}
+
+a.mail:before {
+    font-family: "FontAwesome";
+    content: "\f0e0";
+}
+
+label.caret_right:before {
+    font-family: "FontAwesome";
+    content: "\f0da";
+}
+
+li.template:before {
+    font-family: "FontAwesome";
+    content: "\f188";
+}
+
+li.soft:before {
+    font-family: "FontAwesome";
+    content: "\f013";
+}
+
+li.course:before {
+    font-family: "FontAwesome";
+    content: "\f0eb";
+}
+
+li.mentor:before {
+    font-family: "FontAwesome";
+    content: "\f2b5";
+}
+
+/*
+Выпадашка
+*/
+ul li ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  ul li input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  ul li input[type=checkbox]:checked ~ ul {
+    max-height: 1000px;
+  }
+
+li {
+    list-style-type:none
+}
