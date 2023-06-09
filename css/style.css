@@ -4,8 +4,8 @@
 } */
 
 body {
-    background: -webkit-linear-gradient(90deg, #ffffff,#c4c4c4);                       
-    background: linear-gradient(90deg, #ffffff,#c4c4c4);
+    background: -webkit-linear-gradient(90deg, #ffffff, #c4c4c4);
+    background: linear-gradient(90deg, #ffffff, #c4c4c4);
     background-color: #fff;
     color: #333;
     transition: background-color 0.5s ease;
@@ -27,18 +27,18 @@ div.mid {
 
 div.header {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px; 
+    font-size: 18px;
     padding-left: 5%;
     padding-top: 0.2%;
     padding-bottom: 0.2%;
-    /*background: #c4c4c4;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                                                       
+    /*background: #c4c4c4;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-left: -1%;
     margin-top: -1%;
 }
 
 
 p.data {
-    background-color:#cecece;
+    background-color: #cecece;
     padding-left: 1%;
 }
 
@@ -73,8 +73,9 @@ img.image {
     background: white;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
     transition: .3s;
-  }
-  .floating-button:hover {
+}
+
+.floating-button:hover {
     background: #666;
     box-shadow: 0 15px 20px #666;
     color: white;
@@ -86,9 +87,7 @@ hr {
     margin-left: 0%;
 }
 
-code {
-
-}
+code {}
 
 /*
 Иконки
@@ -166,17 +165,17 @@ ul li ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-  }
-  
-  ul li input[type=checkbox] {
+}
+
+ul li input[type=checkbox] {
     position: absolute;
     opacity: 0;
-  }
-  
-  ul li input[type=checkbox]:checked ~ ul {
+}
+
+ul li input[type=checkbox]:checked~ul {
     max-height: 1000px;
-  }
+}
 
 li {
-    list-style-type:none
+    list-style-type: none
 }
