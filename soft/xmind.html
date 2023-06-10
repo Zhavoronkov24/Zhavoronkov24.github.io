@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmind</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_package_v0.16/favicon.ico">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <p><a href="../index.html">@slav.qa</a> / <a href="../soft.html">qa_soft</a> / <a href="xmind.html">xmind</a></p>
+    </div>
+    <div class="mid">
+        <div class="head">
+            <h1 class="main_name"> xmind</h1>
+        </div>
+        <div class="info">
+            <p class="data">для составления mind-карт я использую xmind 👇🏼</a></p>
+            <br>
+        </div>
+        <div class="data">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="../img/soft_img/xm1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="../img/soft_img/xm2.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="../img/soft_img/xm3.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="../img/soft_img/xm4.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <script src="../js/slideshow.js"></script>
+
+            <p class="data">установка через brew: <button class="copy-btn"
+                    data-clipboard-text="brew install --cask xmind">brew install --cask xmind</button></p>
+            <script>
+                var clipboard = new ClipboardJS('.copy-btn');
+            </script>
+            <br>
+            <a href="../soft.html" class="floating-button">👈 Назад</a>
+            <a href="https://xmind.app/" class="floating-button" target="_blank">👉 Сайт</a>
+        </div>
+    </div>
+</body>
+
+</html>
