@@ -36,6 +36,9 @@ div.header {
     margin-top: -1%;
 }
 
+h2 {
+    font-size: 20px;
+}
 
 p.data {
     background-color: #cecece;
