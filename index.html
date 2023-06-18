@@ -5,25 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>slav.qa</title>
+  <title>@slav.qa</title>
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon.ico">
   <link href="css/style.css" rel="stylesheet">
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYE0P1GS41"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KYE0P1GS41');
-</script>
 </head>
 
 <body>
   <div class="header">
-    <p><a href="index.html">@slav.qa</a></p>
+    <br>
+    <a href="index.html">@slav.qa</a>
   </div>
   <div class="mid">
     <div class="container">
@@ -37,13 +29,11 @@
       <p class="data"> мой стек - java, selenium, junit, maven, cucumber</p>
     </div>
     <div>
-      <h2>более подробно по ссылкам ниже👇🏼</h2>
-      <p>
-        <a class="cv" href="https://drive.google.com/file/d/1XXBWFv4h9Z438RlG4L3gxd2kcifpktd6/view" target="_blank">
-          cv</a> |
-        <a class="github" href="https://github.com/Zhavoronkov24" target="_blank"> github</a> |
-        <a class="javarush" href="https://javarush.com/users/3057679" target="_blank"> javarush</a>
-      </p>
+      <h2>более подробно по ссылкам ниже 👇🏼</h2>
+      <a class="cv" href="https://drive.google.com/file/d/1XXBWFv4h9Z438RlG4L3gxd2kcifpktd6/view" target="_blank">
+        cv</a> |
+      <a class="github" href="https://github.com/Zhavoronkov24" target="_blank"> github</a> |
+      <a class="javarush" href="https://javarush.com/users/3057679" target="_blank"> javarush</a>
     </div>
     <div>
       <h2> активности:</h2>
@@ -69,17 +59,45 @@
         </li>
       </ul>
       <h2>соц. сети:</h2>
-      <p>
-        <a class="telegram_main" href="https://t.me/SZhavoronkov24" target="_blank"> telegram</a> |
-        <a class="telegram_channel" href="https://t.me/qa_chill" target="_blank"> telegram канал</a>
-      </p>
+      <a class="telegram_main" href="https://t.me/SZhavoronkov24" target="_blank"> telegram</a> |
+      <a class="telegram_channel" href="https://t.me/qa_chill" target="_blank"> telegram канал</a>
       <h2>почта:</h2>
       <a class="mail" href="mailto:sl.zhavoronkov@yandex.ru"> sl.zhavoronkov@yandex.ru</a>
     </div>
-
     <div class="css-treeview">
-
     </div>
+
+    <!-- Тема -->
+
+    <div class="theme-switch">
+      <input type="checkbox" id="toggle-theme">
+      <label for="toggle-theme"></label>
+    </div>
+    <script>
+      const themeToggle = document.querySelector('#toggle-theme');
+      const currentTheme = localStorage.getItem('theme');
+
+      if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+          themeToggle.checked = true;
+          document.querySelector('.theme-switch label').setAttribute('data-content', '🌙');
+        }
+      }
+
+      themeToggle.addEventListener('change', function () {
+        if (this.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          document.querySelector('.theme-switch label').setAttribute('data-content', '🌙');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+          document.querySelector('.theme-switch label').setAttribute('data-content', '☀️');
+        }
+      });
+    </script>
   </div>
 </body>
 
