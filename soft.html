@@ -13,7 +13,8 @@
 
 <body>
     <div class="header">
-        <p><a href="index.html">@slav.qa</a> / <a href="soft.html">qa_soft</a></p>
+        <br>
+        <a href="index.html">@slav.qa</a> / <a href="soft.html">qa_soft</a>
     </div>
     <div class="mid">
         <div class="head">
@@ -30,7 +31,8 @@
                         <input type="checkbox">
                         работа с аттачами
                         <ul>
-                            <li><a href="https://support.apple.com/ru-ru/HT201361" target="_blank">🍏 штатная утилита macos</a></li>
+                            <li><a href="https://support.apple.com/ru-ru/HT201361" target="_blank">🍏 штатная утилита
+                                    macos</a></li>
                             <li><a href="https://shottr.cc/" target="_blank">📸 shottr</a></li>
                         </ul>
                     </label>
@@ -111,9 +113,40 @@
                     </label>
                 </li>
             </ul>
-        </div>
-            <br>
             <a href="index.html" class="floating-button">👈 Назад</a>
+        </div>
+
+        <!-- Тема -->
+
+        <div class="theme-switch">
+            <input type="checkbox" id="toggle-theme">
+            <label for="toggle-theme"></label>
+        </div>
+        <script>
+            const themeToggle = document.querySelector('#toggle-theme');
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+
+                if (currentTheme === 'dark') {
+                    themeToggle.checked = true;
+                    document.querySelector('.theme-switch label').setAttribute('data-content', '🌙');
+                }
+            }
+
+            themeToggle.addEventListener('change', function () {
+                if (this.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    document.querySelector('.theme-switch label').setAttribute('data-content', '🌙');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    document.querySelector('.theme-switch label').setAttribute('data-content', '☀️');
+                }
+            });
+        </script>
     </div>
 </body>
 
