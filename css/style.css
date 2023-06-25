@@ -95,6 +95,10 @@ code {}
 /*
 Иконки
 */
+a.linkedin:before {
+  font-family: "FontAwesome";
+  content: "\f0e1";
+}
 
 a.github:before {
     font-family: "FontAwesome";
