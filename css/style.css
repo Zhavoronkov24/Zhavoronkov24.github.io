@@ -90,8 +90,6 @@ hr {
     margin-left: 0%;
 }
 
-code {}
-
 /*
 Иконки
 */
@@ -149,6 +147,12 @@ li.template:before {
     font-family: "FontAwesome";
     content: "\f188";
 }
+
+li.weather:before {
+  font-family: "FontAwesome";
+  content: "\f2c9";
+}
+
 
 li.soft:before {
     font-family: "FontAwesome";
@@ -375,6 +379,4 @@ body {
     box-shadow: 0 15px 20px #616161;
     transform: translateY(-7px);
   }
-  
-  
   
