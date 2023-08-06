@@ -153,6 +153,10 @@ li.weather:before {
   content: "\f2c9";
 }
 
+li.timediff:before {
+  font-family: "FontAwesome";
+  content: "\f017";
+}
 
 li.soft:before {
     font-family: "FontAwesome";
