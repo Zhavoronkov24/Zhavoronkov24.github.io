@@ -158,6 +158,12 @@ li.timediff:before {
   content: "\f017";
 }
 
+li.colorppicker:before {
+  font-family: "FontAwesome";
+  content: "\f08d";
+}
+
+
 li.soft:before {
     font-family: "FontAwesome";
     content: "\f013";
