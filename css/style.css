@@ -304,6 +304,7 @@ img {vertical-align: middle;}
 
 body {
     background: linear-gradient(90deg, #ffffff, #c4c4c4);
+    transition: 0.3s ease;
     color: #333;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -313,6 +314,7 @@ body {
 }
 
 .theme-switch {
+    transition: 0.3s ease;
     position: fixed;
     bottom: 5px;
     left: 5px;
@@ -371,13 +373,15 @@ body {
   }
   
 
-  [data-theme="dark"] body {
+  [data-theme="dark"] body, .smooth-transition {
     background: linear-gradient(90deg, #282828, #1f1f1f);
+    transition: 0.3s ease;
     color: #cbcbcb;
   }
 
-  [data-theme="dark"] p {
+  [data-theme="dark"] p, .smooth-transition {
     background: linear-gradient(90deg, #454545, #202020);
+    transition: 0.3s ease;
   }
 
   [data-theme="dark"] .floating-button {
@@ -389,4 +393,4 @@ body {
     box-shadow: 0 15px 20px #616161;
     transform: translateY(-7px);
   }
-  
+

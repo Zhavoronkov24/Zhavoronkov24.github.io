@@ -15,9 +15,11 @@ themeToggle.addEventListener('change', function () {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
         document.querySelector('.theme-switch label').setAttribute('data-content', '🌙');
+        document.documentElement.classList.add('smooth-transition');
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
         document.querySelector('.theme-switch label').setAttribute('data-content', '☀️');
+        document.documentElement.classList.add('smooth-transition');
     }
 });
