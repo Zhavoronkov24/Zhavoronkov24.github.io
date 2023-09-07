@@ -144,6 +144,12 @@ li.colorppicker:before {
   content: "\f08d";
 }
 
+li.gitlab_commit_manager:before {
+  font-family: "FontAwesome";
+  content: "\f296";
+}
+
+
 
 li.soft:before {
     font-family: "FontAwesome";
