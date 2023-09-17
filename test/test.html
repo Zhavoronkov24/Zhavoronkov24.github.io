@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Отель</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .button-group button.registration {
+            background-color: #4caf50;
+        }
+
+        .button-group button.clear {
+            background-color: #f44336;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Отель.ком</h4>
+         <h1>Регистрция</h1>   
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="first-name">Имя:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <div class="error-message" id="first-name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Фамилия:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <div class="error-message" id="last-name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Дата рождения:</label>
+                <input type="datetime-local" id="birthdate" name="birthdate" required>
+                <div class="error-message" id="birthdate-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="city">Город:</label>
+                <input type="text" id="city" name="city" required>
+                <div class="error-message" id="city-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Почта:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="text" id="password" name="password" required>
+                <div class="password-message" id="password-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Пол:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Выберите пол</option>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                ... <div class="error-message" id="gender-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error-message" id="phone-error"></div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я принимаю пользовательское соглашение</label>
+                </div>
+                <div class="error-message" id="agreement-error"></div>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="registration">Регистрация</button>
+                <button type="button" class="clear">Очистить все</button>
+            </div>
+        </form>
+        <div class="social-icons">
+            <label for="auth">Или с помощью:        </label>
+            <br>
+            <br>
+            <img src="icon/google.png" alt="Google">
+            <img src="icon/yandex.png" alt="Yandex">
+            <img src="icon/mailru.png" alt="Mail.ru">
+            <img src="icon/rambler.png" alt="Rambler">
+        </div>
+    </div>
+
+    <script>
+     // Функция для проверки валидности имени и фамилии
+function validateName(input) {
+    var regex = /^[a-zA-Zа-яА-Я]+$/;
+    if (!regex.test(input.value)) {
+        input.setCustomValidity('Пожалуйста, введите только буквы.');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
+// Функция для проверки валидности электронной почты
+function validateEmail(input) {
+    var regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!regex.test(input.value)) {
+        input.setCustomValidity('Пожалуйста, введите корректный адрес электронной почты.');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
+// Функция для проверки валидности номера телефона
+function validatePhone(input) {
+    var regex = /^[0-9]+$/;
+    if (!regex.test(input.value)) {
+        input.setCustomValidity('Пожалуйста, введите только цифры.');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
+// Функция для проверки валидности пароля
+function validatePass(input) {
+    var regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}$/;
+    if (!regex.test(input.value)) {
+        input.setCustomValidity('Пожалуйста, введите пароль, который содержит хотя бы одну заглавную букву, одну строчную букву, одну цифру и один специальный символ, и имеет длину не менее 8 символов..');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
+// Проверка пользовательского соглашения
+function validateAgreement(input) {
+    if (!input.checked) {
+        input.setCustomValidity('Пожалуйста, примите пользовательское соглашение.');
+    } else {
+        input.setCustomValidity('');
+    }
+}
+
+var firstNameInput = document.getElementById('first-name');
+var lastNameInput = document.getElementById('last-name');
+var emailInput = document.getElementById('email');
+var passInput = document.getElementById('password');
+var phoneInput = document.getElementById('phone');
+var agreementInput = document.getElementById('agreement');
+
+// Добавление обработчиков событий для валидации после снятия фокуса
+firstNameInput.addEventListener('blur', function() {
+    validateName(firstNameInput);
+});
+
+lastNameInput.addEventListener('blur', function() {
+    validateName(lastNameInput);
+});
+
+emailInput.addEventListener('blur', function() {
+    validateEmail(emailInput);
+});
+
+phoneInput.addEventListener('blur', function() {
+    validatePhone(phoneInput);
+});
+
+agreementInput.addEventListener('change', function() {
+    validateAgreement(agreementInput);
+});
+
+passInput.addEventListener('change', function() {
+    validatePass(passInput);
+});
+
+// Обработчик события отправки формы
+document.getElementById('registration-form').addEventListener('event', function(event) {
+    if (!this.checkValidity()) {
+        event.preventDefault();
+        window.open('google.com')
+        alert('Пожалуйста, заполните все поля корректно.');
+    }
+});
+
+    </script>
+</body>
+</html>
