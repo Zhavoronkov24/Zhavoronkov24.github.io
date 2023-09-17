@@ -141,7 +141,7 @@
             <div class="form-group">
                 <div class="checkbox-group">
                     <input type="checkbox" id="agreement" name="agreement" required>
-                    <label for="agreement">Я принимаю пользовательское соглашение</label>
+                    <label for="agreement">Я принимаю <a href="oferta.html">пользовательское соглашение</a></label>
                 </div>
                 <div class="error-message" id="agreement-error"></div>
             </div>
@@ -154,8 +154,8 @@
             <label for="auth">Или с помощью:        </label>
             <br>
             <br>
-            <img src="icon/google.png" alt="Google">
-            <img src="icon/yandex.png" alt="Yandex">
+            <a href="https://google.com" target="_top"><img src="icon/google.png" alt="Google"></a>
+            <a href="https://yandex.ru"><img src="icon/yandex.png" alt="Yandex"></a>
             <img src="icon/mailru.png" alt="Mail.ru">
             <img src="icon/rambler.png" alt="Rambler">
         </div>
@@ -184,7 +184,7 @@ function validateEmail(input) {
 
 // Функция для проверки валидности номера телефона
 function validatePhone(input) {
-    var regex = /^[0-9]+$/;
+    var regex = /^[0-9]$/;
     if (!regex.test(input.value)) {
         input.setCustomValidity('Пожалуйста, введите только цифры.');
     } else {
