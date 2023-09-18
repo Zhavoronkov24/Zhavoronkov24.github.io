@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container, .login-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, .login-form {
+    text-align: center;
+}
+
+.form-group, .login-form {
+    margin-bottom: 20px;
+}
+
+label , .login-form {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbox-group, .login-form {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label, .login-form {
+    margin-right: 10px;
+}
+
+.button-group, .login-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button-group button.registration {
+    background-color: #4caf50;
+}
+
+.button-group button.clear {
+    background-color: #f44336;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}

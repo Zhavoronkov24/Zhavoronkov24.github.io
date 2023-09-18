@@ -3,91 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Отель</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
+    <link href="style.css" rel="stylesheet">
 
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"], input[type="email"], input[type="tel"], select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-        }
-
-        .checkbox-group label {
-            margin-right: 10px;
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .button-group button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .button-group button.registration {
-            background-color: #4caf50;
-        }
-
-        .button-group button.clear {
-            background-color: #f44336;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -159,6 +76,9 @@
             <img src="icon/mailru.png" alt="Mail.ru">
             <img src="icon/rambler.png" alt="Rambler">
         </div>
+        <div>
+            <h3>Уже есть аккаунт? <a href="auth.html">Войти</a></h3> 
+        </div>
     </div>
 
     <script>
@@ -185,11 +105,11 @@ function validateEmail(input) {
 // Функция для проверки валидности номера телефона
 function validatePhone(input) {
     var regex = /^[0-9]$/;
-    if (!regex.test(input.value)) {
-        input.setCustomValidity('Пожалуйста, введите только цифры.');
-    } else {
-        input.setCustomValidity('');
-    }
+    // if (!regex.test(input.value)) {
+    //     input.setCustomValidity('Пожалуйста, введите только цифры.');
+    // } else {
+    //     input.setCustomValidity('');
+    // }
 }
 
 // Функция для проверки валидности пароля
@@ -253,5 +173,6 @@ document.getElementById('registration-form').addEventListener('event', function(
 });
 
     </script>
+    <script src="DB.js"></script>
 </body>
 </html>
