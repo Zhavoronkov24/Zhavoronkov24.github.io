@@ -27,10 +27,13 @@ request.onsuccess = function(event) {
     const messageElement = document.getElementById('message');
   
     if (user && user.password === password) {
-      messageElement.textContent = 'Вы вошли';
+      messageElement.textContent = 'Загрузка...';
+      setTimeout(function() {
+        window.location.href = "success.html";
+      }, 1500);
     } else {
       messageElement.textContent = 'Пользователь не найден';
-    }
+  }
   };
   
 
