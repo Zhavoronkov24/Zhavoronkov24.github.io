@@ -8,6 +8,9 @@ request.onsuccess = function(event) {
   // Обработчик события отправки формы
   document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault();
+    setTimeout(function() {
+      window.location.href = "success_reg.html";
+    }, 1500);
 
     // Получение значений полей формы
     const firstName = document.getElementById('first-name').value;
