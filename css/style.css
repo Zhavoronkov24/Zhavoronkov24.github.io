@@ -94,6 +94,11 @@ a.javarush:before {
     content: "\f2c5";
 }
 
+a.habr_career:before {
+  font-family: "FontAwesome";
+  content: "\f2be";
+}
+
 h1.main_name:before {
     font-family: "FontAwesome";
     content: "\f120";
@@ -325,7 +330,8 @@ body {
 }
 
 .github::after,
-.javarush::after {
+.javarush::after,
+.habr_career:after {
   content: " 🟢";
   font-size: 6px;
   vertical-align: 10px;
