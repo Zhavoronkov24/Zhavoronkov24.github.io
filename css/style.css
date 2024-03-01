@@ -71,6 +71,21 @@ hr {
     margin-left: 0%;
 }
 
+input[type="input"] {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="input"]:focus {
+  outline: none;
+  border-color: #999;
+}
+
 /*
 Иконки
 */
@@ -169,6 +184,11 @@ li.course:before {
 li.mentor:before {
     font-family: "FontAwesome";
     content: "\f2b5";
+}
+
+li.status-code:before {
+  font-family: "FontAwesome";
+  content: "\f059";
 }
 
 /*
