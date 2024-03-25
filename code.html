@@ -16,71 +16,146 @@
         </div>
 </div>
     <div class="mid">
+        <div>
             <input type="input" id="searchInput" onkeyup="searchCards()" class="form__field" name="name" placeholder="Найти по коду...">
+        </div>
+            <div class="checkboxes">
+                <input type="checkbox" id="info" name="info" checked>
+                <label for="info">Информационные</label><br>
+
+                <input type="checkbox" id="success" name="success" checked>
+                <label for="success"></label>Успешные<br>
+
+                <input type="checkbox" id="redirect" name="redirect" checked>
+                <label for="redirect">Перенаправления</label><br>
+
+                <input type="checkbox" id="client" name="client" checked>
+                <label for="client">Клиентские</label><br>
+
+                <input type="checkbox" id="server" name="server" checked>
+                <label for="server">Серверные</label><br>
+            </div>
     <div class="grid">
+        <div class="info-code">
+        <div class="card">
+            <img src="img/code/100.jpeg" alt="100">
+            <p class="status-code">100 Continue</p>
+            <p class="description">Информация о том, что все до сих пор в порядке и что клиент должен продолжить запрос или игнорировать его, если он уже завершён.</p>
+        </div>
+    
         <div class="card">
             <img src="img/code/102.jpeg" alt="102">
             <p class="status-code">102 Processing</p>
+            <p class="description">Информация о том, что запрос принят сервером и находится в обработке, но этот процесс еще не завершен</p>
         </div>
+    </div>
+    <div class="success-code">
         <div class="card">
             <img src="img/code/200.jpeg" alt="200">
             <p class="status-code">200 OK</p>
+            <p class="description">Запрос выполнен успешно</p>
         </div>
         <div class="card">
             <img src="img/code/201.jpeg" alt="201">
             <p class="status-code">201 Created</p>
+            <p class="description">Запрос выполнен успешно и привёл к созданию ресурса</p>
         </div>
+    </div>
+    <div class="redirect-code">
         <div class="card">
             <img src="img/code/302.jpeg" alt="302">
-            <p class="status-code">302 Moved Temporarily</p>
+            <p class="status-code">302 Found<br>302 Moved Temporarily</p>
+            <p class="description">Запрошенный ресурс был временно перемещён по адресу, указанному в заголовке Location</p>
         </div>
+    </div>
+    <div class="client-code">
         <div class="card">
             <img src="img/code/400.jpeg" alt="400">
             <p class="status-code">400 Bad Request</p>
-        </div>
-        <div class="card">
-            <img src="img/code/403.jpeg" alt="403">
-            <p class="status-code">403 Forbidden</p>
-        </div>
-        <div class="card">
-            <img src="img/code/404.jpeg" alt="404">
-            <p class="status-code">404 Not Found</p>
+            <p class="description">Сервер не смог понять запрос из-за недействительного синтаксиса</p>
         </div>
         <div class="card">
             <img src="img/code/401(2).jpeg" alt="401">
             <p class="status-code">401 Unauthorized</p>
+            <p class="description">Запрос не был применён, поскольку ему не хватает действительных учётных данных для целевого ресурса</p>
+        </div>
+        <div class="card">
+            <img src="img/code/403.jpeg" alt="403">
+            <p class="status-code">403 Forbidden</p>
+            <p class="description">Сервер понял запрос, но отказывается его авторизовать</p>
+        </div>
+        <div class="card">
+            <img src="img/code/404.jpeg" alt="404">
+            <p class="status-code">404 Not Found</p>
+            <p class="description">Сервер не может найти запрошенный ресурс</p>
         </div>
         <div class="card">
             <img src="img/code/405.jpeg" alt="405">
             <p class="status-code">405 Method Not Allowed</p>
+            <p class="description">Метод запроса известен серверу, но был отключён и не может быть использован</p>
         </div>
         <div class="card">
             <img src="img/code/408.jpeg" alt="408">
             <p class="status-code">408 Request Timeout</p>
+            <p class="description">Сервер хотел бы отключить это неиспользуемое соединение</p>
         </div>
         <div class="card">
             <img src="img/code/413.jpeg" alt="413">
             <p class="status-code">413 Request Entity Too Large</p>
+            <p class="description">Объект запроса больше, чем ограничения, определённые сервером</p>
+        </div>
+        <div class="card">
+            <img src="img/code/414.jpeg" alt="414">
+            <p class="status-code">414 URI Too Long</p>
+            <p class="description">URI, запрошенный клиентом, длиннее, чем сервер готов интерпретировать</p>
         </div>
         <div class="card">
             <img src="img/code/415.jpeg" alt="415">
             <p class="status-code">415 Unsupported Media Type</p>
+            <p class="description">Сервер отказывается принять запрос, потому что формат содержимого не поддерживается сервером</p>
         </div>
+        <div class="card">
+            <img src="img/code/418.jpeg" alt="418">
+            <p class="status-code">418 I'm a teapot</p>
+            <p class="description">Сервер не может приготовить кофе, потому что он чайник. Эта ошибка ссылается на Hyper Text Coffee Pot Control Protocol (гипертекстовый протокол кофейников) который был первоапрельской шуткой в 1998 году</p>
+        </div>
+        <div class="card">
+            <img src="img/code/429.jpeg" alt="429">
+            <p class="status-code">429 Too Many Requests</p>
+            <p class="description">пользователь отправил слишком много запросов за последнее время</p>
+        </div>
+        <div class="card">
+            <img src="img/code/451.jpeg" alt="451">
+            <p class="status-code">451 Unavailable For Legal Reasons</p>
+            <p class="description">Пользователь запросил ресурс, который недоступен по юридическим причинам, например веб-страница, заблокированная из-за судебных исков</p>
+        </div>
+    </div>
+    <div class="server-code">
         <div class="card">
             <img src="img/code/500.jpeg" alt="500">
             <p class="status-code">500 Internal Server Error</p>
+            <p class="description">Сервер столкнулся с неожиданной ошибкой, которая помешала ему выполнить запрос</p>
         </div>
         <div class="card">
             <img src="img/code/501.jpeg" alt="501">
             <p class="status-code">501 Not Implemented</p>
+            <p class="description">Метод запроса не поддерживается сервером и не может быть обработан</p>
+        </div>
+        <div class="card">
+            <img src="img/code/502.jpeg" alt="502">
+            <p class="status-code">502 Bad Gateway</p>
+            <p class="description">Сервер, действуя как шлюз или прокси, получил неверный ответ от восходящего сервера</p>
         </div>
         <div class="card">
             <img src="img/code/503.jpeg" alt="503">
             <p class="status-code">503 Service Unavailable</p>
+            <p class="description">Сервер не готов обработать данный запрос по причине его недоступности</p>
         </div>
         <div class="card">
             <img src="img/code/504.jpeg" alt="504">
             <p class="status-code">504 Gateway Timeout</p>
+            <p class="description">Сервер, действуя как шлюз или прокси, не может получить ответ вовремя</p>
+        </div>
         </div>
     </div>
     <div class="theme-switch">
@@ -88,6 +163,7 @@
         <label for="toggle-theme"></label>
       </div>
 </div>
+</div>  
 <script src="js/code.js"></script>
 <script src="js/theme.js"></script>
 </body>
