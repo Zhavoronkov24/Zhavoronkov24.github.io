@@ -1,90 +1,106 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>slav.qa</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon.ico">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slav.qa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
-  <div class="header">
-    <br>
-    <a href="index.html">slav.qa</a>
-  </div>
-  <div class="mid">
-    <div class="container">
-      <img src="img/it's_me.png" alt="Avatar" class="image">
+    <div id="loading">
+        <div id="spinner"></div>
     </div>
-    <div class="info">
-      <h1 class="main_name" id="text"> slav.qa</h1>
-      <p class="data"> привет! рад приветствовать тебя на своей странице!</p>
-      <p class="data"> я специалист в области обеспечения качества. занимаюсь ручным и автоматизированным тестированием.
-      </p>
-      <p class="data"> мой стек - java, selenium, junit, maven, cucumber</p>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title"><a href="index.html">slav.qa</a></div><br>
+    <div id="links">
+        <a href="#about">о себе</a>
+        <a href="#utils">утилиты</a>
+        <a href="#course">обучение</a>
+        <a href="#mentor">менторство</a>
+        <a href="#contact">контакты</a>
+
     </div>
-    <div>
-      <h2>более подробно по ссылкам ниже 👇🏼</h2>
-      <a class="linkedin" href="https://www.linkedin.com/in/slavqa" target="_blank"> linkedin</a> |
-      <a class="github" href="https://github.com/Zhavoronkov24" target="_blank"> github</a> |
-      <a class="javarush" href="https://javarush.com/users/3057679" target="_blank"> javarush</a> |
-      <a class="habr_career" href="https://career.habr.com/slav_qa" target="_blank"> habr career</a>
-    </div>
-    <div>
-      <h2> активности:</h2>
-      <ul>
-        <li>
-          <label class="caret_right">
-            <input type="checkbox">
-            dev
-            <ul>
-              <li class="weather"><a href="weather.html"> weather </a></li>
-              <li class="timediff"><a href="https://github.com/Zhavoronkov24/time-difference-extension" target="_blank"> time difference extension </a></li>
-              <li class="colorppicker"><a href="https://github.com/Zhavoronkov24/color-picker-extension" target="_blank"> color picker extension </a></li>
-              <li class="gitlab_commit_manager"><a href="https://github.com/Zhavoronkov24/gitlab_commit_manager" target="_blank"> gitlab commit manager extension </a></li>
-            </ul>
-          </label>
-        </li>
-        <li>
-          <label class="caret_right">
-            <input type="checkbox">
-            утилиты/полезности
-            <ul>
-              <li class="status-code"><a href="code.html" target="_blank"> status code </a></li>
-              <li class="template"><a href="template.html"> bug report template</a></li>
-              <li class="soft"><a href="soft.html"> qa_soft</a></li>
-            </ul>
-          </label>
-        </li>
-        <li>
-          <label class="caret_right">
-            <input type="checkbox">
-            консультации/менторство
-            <ul>
-              <li class="mentor"><a href="mentor.html"> qa_mentor</a></li>
-            </ul>
-          </label>
-        </li>
-      </ul>
-      <h2>соц. сети:</h2>
-      <a class="telegram_main" href="https://t.me/SZhavoronkov24" target="_blank"> telegram</a> |
-      <a class="telegram_channel" href="https://t.me/qa_chill" target="_blank"> telegram канал</a>
-      <h2>почта:</h2>
-      <a class="mail" href="mailto:offer.slav.qa@gmail.com"> offer.slav.qa@gmail.com</a>
-    </div>
-    <div class="css-treeview">
     </div>
 
-    <div class="theme-switch">
-      <input type="checkbox" id="toggle-theme">
-      <label for="toggle-theme"></label>
+    <center>
+    <div id="middle">
+        <div id="tagline" class="animated zoomIn" style="animation-delay:2.2s;">
+        </div>
     </div>
-  </div>
-  <script src="js/theme.js"></script>
+    </center>
+
+    <div id="main">
+             <div id="about">
+                 <h1>о себе</h1>   
+                 <div>
+                        <p>
+                            привет! рад приветствовать тебя на своей странице! я full-stack qa web. <br> 
+                            занимаюсь ручным и автоматизированным тестированием. <br>
+                            стек автоматизации - java, selenium, junit, maven, cucumber
+                        </p>
+                        <a href="https://career.habr.com/slav_qa" target="_blank"><button class="btn_one">habr career</button></a>
+                        <a href="https://github.com/Zhavoronkov24" target="_blank"><button class="btn_one">github</button></a>
+
+                 </div> 
+                 
+             </div>
+         
+              <div id="utils">
+                 <h1>утилиты</h1>
+
+                 <div class="project">
+                 <h2>status code</h2>
+                 <div>описание основных статус-кодов</div>
+                 <a href="code.html" target="_blank"><button class="btn_one">перейти</button></a>
+                </div>
+             </div>
+
+             <div id="course">
+                <h1>обучение</h1>
+
+                <div class="project">
+                <h2>обучение тестированию по до уровня junior за 2 месяца</h2>
+                <div>На данный момент курс в активной разработке</div>
+                <a href="https://t.me/SZhavoronkov24" target="_blank"><button class="btn_one">telegram</button></a>
+               </div>
+            </div>
+
+             <div id="mentor">
+                <h1>ментор</h1>
+
+                <div class="project">
+                <h2>помощь и менторство</h2>
+                <div>пиши мне в телеграм, если: <br>
+                    <br>
+                    ▪ нужна помощь в освоении теории тестирования<br>
+                    ▪ нужна помощь в освоении какого-либо инструмента<br>
+                    ▪ нужно тестовое собеседование с подробным разбором</div>
+                <a href="https://t.me/SZhavoronkov24" target="_blank"><button class="btn_one">telegram</button></a>
+               </div>
+            </div>
+         
+              <div id="contact">
+                 <h1>контакты</h1> 
+                 <!-- <form>
+                     <input type="text" placeholder="name" required>
+                     <input type="email" placeholder="email" required><br>
+                     <textarea placeholder="your message" required rows="5"></textarea><br>
+                     <button class="btn_one">send</button>
+                 </form>  -->
+                 <p> почта - <a id="post" href="mailto:offer.slav.qa.com">offer.slav.qa@gmail.com</a></p>
+                 <div id="details">
+                 </div>   
+             </div>
+    </div>
+    <div id="footer">
+         <br> <a href="index.html">slav.qa</a>
+         <br>© 2024
+    </div>
+<script src="js/index.js" type="text/javascript"></script>
 </body>
-
 </html>

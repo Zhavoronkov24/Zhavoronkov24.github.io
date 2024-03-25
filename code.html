@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package_v0.16/favicon.ico">
-<link href="css/style.css" rel="stylesheet">
-<title>status code</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>status code</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
 <body>
-    <div class="header">
-        <br>
-        <a href="index.html">@slav.qa</a> / <a href="code.html">status code</a>
-        <div class="head">
-            <h1>Коты ответов HTTP</h1>
-        </div>
+    <div id="top" style="padding-bottom: 20%;">
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title"><a href="index.html">slav.qa</a></div><br>
+    </div>
 </div>
-    <div class="mid">
-        <div>
-            <input type="input" id="searchInput" onkeyup="searchCards()" class="form__field" name="name" placeholder="Найти по коду...">
-        </div>
-            <div class="checkboxes">
+    <div id="mid">
+        <div id = filter>
+            <input type="input" id="searchInput" onkeyup="searchCards()" class="form__field" name="name" style="color: black;" placeholder="Найти по коду...">
+            <div id="checkboxes">
                 <input type="checkbox" id="info" name="info" checked>
                 <label for="info">Информационные</label><br>
 
@@ -35,6 +39,8 @@
                 <input type="checkbox" id="server" name="server" checked>
                 <label for="server">Серверные</label><br>
             </div>
+        </div>
+            
     <div class="grid">
         <div class="info-code">
         <div class="card">
@@ -158,13 +164,12 @@
         </div>
         </div>
     </div>
-    <div class="theme-switch">
-        <input type="checkbox" id="toggle-theme">
-        <label for="toggle-theme"></label>
-      </div>
 </div>
 </div>  
-<script src="js/code.js"></script>
-<script src="js/theme.js"></script>
+<script src="js/index.js"></script>
+<div id="footer">
+    <br> <a href="index.html">slav.qa</a>
+    <br>© 2024
+</div>
 </body>
 </html>
