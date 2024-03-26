@@ -85,10 +85,19 @@ body,html {
     padding-top:20vh;
 }
 
-@supports (-webkit-touch-callout: none) {
-    /* Стили, которые должны применяться только в Safari на iOS */
+
+@media screen and (max-width: 768px) {
     .middle {
-        -webkit-overflow-scrolling: touch; /* Для плавного скроллинга */
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../img/back.jpeg") center center fixed;
+        background-size: cover;
+        background-attachment: scroll;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 1s ease-in-out;
     }
 }
 
