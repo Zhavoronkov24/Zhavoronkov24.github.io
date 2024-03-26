@@ -429,6 +429,10 @@ button:focus {
     outline: none;
     border-color: #999;
   }
+
+  .date{
+    font-size: 10px;
+  }
   
   .info-code{
     display:contents;
