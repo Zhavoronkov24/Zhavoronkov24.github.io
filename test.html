@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Заказать звонок</h1>
+        <form id="callbackForm">
+            <div class="input-group">
+                <label for="name">Имя <span class="required">*</span></label>
+                <div class="input-icon">
+                    <input type="text" id="name" name="name" required>
+                    <!-- <span class="icon">&#128100;</span> -->
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="phone">Телефон <span class="required">*</span></label>
+                <div class="input-icon">
+                    <input type="text" id="phone" name="phone" required>
+                    <!-- <span class="icon">&#128222;</span> -->
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <div class="input-icon">
+                    <input type="email" id="email" name="email" required>
+                    <!-- <span class="icon">&#9993;</span> -->
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="comment">Комментарий</label>
+                <div class="input-icon">
+                    <textarea id="comment" name="comment"></textarea>
+                    <!-- <span class="icon">&#9997;</span> -->
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="file">Прикрепить файл</label>
+                <input type="file" id="file" name="file">
+                <div id="fileList"></div>
+            </div>
+            
+            <label class="checkbox-container">
+                <span class="required">*</span>
+                Я даю свое согласие на<a href="privacy.html" target="_blank"> обработку моих персональных данных</a>
+                <input type="checkbox" id="consent" name="consent" required>
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="checkbox-container">
+                Я хочу получать новости и рассылки от компании
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <span class="checkmark"></span>
+            </label>
+            
+            <button type="submit">Отправить</button>
+            
+            <p class="note">* Обязательные для заполнения поля</p>
+        </form>
+        
+        <div id="successMessage" class="hidden">
+            <p>Ожидайте нашего звонка!</p>
+            <button onclick="resetForm()">Заказать звонок снова</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html>
