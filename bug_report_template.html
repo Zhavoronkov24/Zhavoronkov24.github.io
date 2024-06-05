@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bug report template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="top" style="padding-bottom: 20%;">
+        <div id="loading">
+            <div id="spinner"></div>
+        </div>
+        <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+            <div id="title"><a href="index.html">slav.qa</a></div><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="bug-report-template">
+          <p id="template">
+[Видео воспроизведения ошибки]()<br>
+<br>
+//Описание<br>
+<br>
+#### Шаги для воспроизведения<br>
+1. <br>
+1. <br>
+1. <br>
+1. <br>
+<br>
+#### Фактический результат <br>
+<br>
+#### Ожидаемый результат<br>
+<br>
+          </p>
+          <button id="copyButton" onclick="copyTemplate()">Копировать</button>
+        </div>
+      </div>
+
+   
+    <script src="js/index.js"></script>
+    <script>
+    function copyTemplate() {
+        var template = document.getElementById('template').innerText;
+        navigator.clipboard.writeText(template).then(function() {
+          var copyButton = document.getElementById('copyButton');
+          copyButton.innerText = 'Скопировано';
+          setTimeout(function() {
+            copyButton.innerText = 'Копировать';
+          }, 2000);
+        }, function(err) {
+          console.error('Could not copy text: ', err);
+        });
+      }
+    </script>
+    <div id="footer">
+        <br> <a href="index.html">slav.qa</a>
+        <br>
+        <p class="date">© 2024</p>
+    </div>
+</body>
+
+</html>
