@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интенсив "Первый автотест на Java"</title>
+    <link rel="stylesheet" href="css/aqa.css">
+</head>
+<body>
+
+<div id="auth">
+    <h2>Авторизация</h2>
+    <form id="auth-form">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Войти</button>
+    </form>
+    <p id="error" style="color: red; display: none;">Неверный пароль, попробуйте еще раз.</p>
+</div>
+
+<div id="content" style="display: none;">
+    <div id="sidebar">
+        <h2>План интенсива:</h2>
+        <ul>
+            <li><a href="#" data-video="video1">День 1: Введение в автотестирование. Базовый синтаксис Java</a></li>
+            <li><a href="#" data-video="video2">День 2: Создание и настройка проекта автотестов</a></li>
+            <li><a href="#" data-video="video3">День 3: Принципы ООП и работа с локаторами</a></li>
+            <li><a href="#" data-video="video4">День 4: Отладка автотестов и отчетность </a></li>
+            
+            <!-- Добавьте другие темы здесь -->
+        </ul>
+    </div>
+    <div id="main">
+        <div id="placeholder">
+            <p>Выберите тему</p>
+        </div>
+        <div class="video-wrapper" style="display: none;">
+            <iframe id="video" src="" allow="fullscreen"></iframe>
+            Запись и материалы появится здесь, примерно, через 30 минут после занятия
+        </div>
+        <div class="materials" style="display: none;">
+            <h3>Домашнее задание</h3>
+            <div id="text-materials">
+                <!-- Текстовые материалы будут загружаться сюда -->
+            </div>
+            <br>
+            <a id="links-materials" href="">
+                <!-- Текстовые материалы будут загружаться сюда -->
+            </a>
+            <br>
+            <h3>Полезные ссылки</h3>
+            <ul id="files">
+                <!-- Ссылки на файлы будут загружаться сюда -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Установить куку
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        const expires = "expires="+ d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Получить куку
+    function getCookie(name) {
+        const cname = name + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i].trim();
+            if (c.indexOf(cname) == 0) {
+                return c.substring(cname.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // Проверить наличие куки и автоматическая авторизация
+    window.onload = function() {
+        const passwordCookie = getCookie("password");
+        if (passwordCookie === 'HelloAuto2024') { // Замените на ваш пароль
+            document.getElementById('auth').style.display = 'none';
+            document.getElementById('content').style.display = 'flex';
+        } else {
+            document.getElementById('auth').style.display = 'block';
+        }
+    }
+
+    // Обработка формы авторизации
+    document.getElementById('auth-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const password = document.getElementById('password').value;
+        if (password === 'HelloAuto2024') { // Замените на ваш пароль
+            setCookie("password", password, 5); // Сохранить пароль на 5 дней
+            document.getElementById('auth').style.display = 'none';
+            document.getElementById('content').style.display = 'flex';
+        } else {
+            document.getElementById('error').style.display = 'block';
+        }
+    });
+
+    const videoMap = {
+        'video1': {
+            'url': '', // Замените на ваши видео
+            'text': '1. Установить IDE \n 2. Установить SDK \n 3. Повторить написание кода из видео самостоятельно \n 4. Выполнить написанный код',
+            'files': [
+                { 'name': 'IntelliJ IDEA Community Edition', 'url': 'https://www.jetbrains.com/ru-ru/idea/download'},
+                { 'name': 'Установка JDK и IDE', 'url': 'https://www.youtube.com/watch?v=fF2NOYxbkwA'},
+                
+                { 'name': 'Плейлист "Java для начинающих"', 'url': 'https://www.youtube.com/playlist?list=PLAma_mKffTOSUkXp26rgdnC0PicnmnDak'}
+                
+            ]
+        },
+        'video2': {
+            'url': '',
+            'text': 'Текстовые материалы для Тема 2',
+            'files': [
+                { 'name': 'Файл 2', 'url': 'link_to_file2' }
+            ]
+        },
+        'video3': {
+            'url': '',
+            'text': 'Текстовые материалы для Тема 3',
+            'files': [
+                { 'name': 'Файл 3', 'url': 'link_to_file3' }
+            ]
+        },
+        'video4': {
+            'url': '',
+            'text': 'Текстовые материалы для Тема 4',
+            'files': [
+                { 'name': 'Файл 3', 'url': 'link_to_file3' }
+            ]
+        }
+        // Добавьте другие видео здесь
+    };
+
+    document.querySelectorAll('#sidebar a').forEach(a => {
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            const videoKey = this.dataset.video;
+            const videoData = videoMap[videoKey];
+
+            document.getElementById('placeholder').style.display = 'none';
+            document.querySelector('.video-wrapper').style.display = 'block';
+            document.querySelector('.materials').style.display = 'block';
+
+            document.getElementById('video').src = videoData.url;
+            if(videoData.url == '') {
+                document.querySelector('.video-wrapper').style.display = 'block';
+                document.querySelector('.materials').style.display = 'none';
+                document.getElementsByClassName('video').style.display = 'none';
+            }
+            document.getElementById('text-materials').innerText = videoData.text;
+            
+            const filesList = document.getElementById('files');
+            filesList.innerHTML = '';
+            videoData.files.forEach(file => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = file.url;
+                a.textContent = file.name;
+                li.appendChild(a);
+                filesList.appendChild(li);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
